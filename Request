@@ -1,4 +1,16 @@
-curl -X GET \
+curl -X POST \
+-H 'Content-Type:application/json' \
 -H 'Authorization: Bearer {g3vcpG2D34EUbk80CC2DW5XwWjhn3KNEAeWCDEyfuG4f1AZceazZgE0CUY/29EM+wFfRNRSiXYH7wn4HAm47EgP8l+SlNqaGM7ucP06jBdVica3ckXD6gtM+AfzssbPmvGKVDoCQ/hB57Qpks11DVgdB04t89/1O/w1cDnyilFU=}' \
-https://api.line.me/v1/oauth/verify
-
+-d '{
+    "replyToken":"nHuyWiB7yP5Zw52FIkcQobQuGDXCTA",
+    "messages":[
+        {
+            "type":"text",
+            "text":"Hello, user"
+        },
+        {
+            "type":"text",
+            "text":"May I help you?"
+        }
+    ]
+}' https://api.line.me/v2/bot/message/reply
